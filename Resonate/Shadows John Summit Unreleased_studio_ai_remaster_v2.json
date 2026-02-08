@@ -1,0 +1,58 @@
+{
+  "input_file": "Shadows John Summit Unreleased.mp3",
+  "output_file": "Shadows John Summit Unreleased_studio_ai_remaster_v2.wav",
+  "stems_separated": true,
+  "stems_regenerated": [
+    "bass",
+    "other"
+  ],
+  "demucs_model": "htdemucs_ft",
+  "jasco_model": "large",
+  "blend_ratio": 0.4,
+  "processing_time_s": 3192.1550781726837,
+  "quality_metrics": {
+    "drums": {
+      "damage_level": "good",
+      "needs_regeneration": false,
+      "clipping_score": 0.0,
+      "distortion_score": 0.09970095753669739,
+      "noise_score": 0.8548210144042969,
+      "snr_db": 17.177684783935547
+    },
+    "bass": {
+      "damage_level": "minor",
+      "needs_regeneration": false,
+      "clipping_score": 0.0,
+      "distortion_score": 0.03611861169338226,
+      "noise_score": 1.0,
+      "snr_db": 1.7514801025390625
+    },
+    "other": {
+      "damage_level": "minor",
+      "needs_regeneration": false,
+      "clipping_score": 0.0,
+      "distortion_score": 0.0005256524309515953,
+      "noise_score": 1.0,
+      "snr_db": 8.512641906738281
+    },
+    "vocals": {
+      "damage_level": "good",
+      "needs_regeneration": false,
+      "clipping_score": 0.0,
+      "distortion_score": 0.009119796566665173,
+      "noise_score": 0.9491783142089844,
+      "snr_db": 15.762325286865234
+    }
+  },
+  "reference_analysis": {
+    "vocal_rms": 0.09055256843566895,
+    "vocal_peak": 0.8663346767425537,
+    "vocal_ratio": 0.2706777101973843,
+    "vocal_peak_ratio": 0.6621220161786845,
+    "spectral_balance_db": 14.95508179154372,
+    "duration_s": 210.49038548752836
+  },
+  "regenerate_minor": true,
+  "force_jasco": false,
+  "vocal_boost": 1.4
+}

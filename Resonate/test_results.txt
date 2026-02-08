@@ -1,0 +1,235 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.9.6, pytest-8.4.2, pluggy-1.6.0 -- /Library/Developer/CommandLineTools/usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /Users/hadijaffery/Development/SnipJarvis/Resonate
+collecting ... collected 62 items
+
+tests/test_integration_phase2_3.py::TestPhase2Integration::test_quality_metrics_analysis PASSED [  1%]
+tests/test_integration_phase2_3.py::TestPhase2Integration::test_before_after_comparison PASSED [  3%]
+tests/test_integration_phase2_3.py::TestPhase2Integration::test_cache_manager_initialization PASSED [  4%]
+tests/test_integration_phase2_3.py::TestPhase2Integration::test_cache_stems FAILED [  6%]
+tests/test_integration_phase2_3.py::TestPhase2Integration::test_segment_caching FAILED [  8%]
+tests/test_integration_phase2_3.py::TestPhase2Integration::test_cache_version_invalidation FAILED [  9%]
+tests/test_integration_phase2_3.py::TestPhase3Integration::test_frequency_restoration FAILED [ 11%]
+tests/test_integration_phase2_3.py::TestPhase3Integration::test_dereverberation PASSED [ 12%]
+tests/test_integration_phase2_3.py::TestPhase3Integration::test_sequential_restoration FAILED [ 14%]
+tests/test_integration_phase2_3.py::TestPipelineIntegration::test_pipeline_with_restoration_settings FAILED [ 16%]
+tests/test_integration_phase2_3.py::TestPipelineIntegration::test_pipeline_get_info_includes_restoration FAILED [ 17%]
+tests/test_integration_phase2_3.py::TestErrorHandling::test_silent_audio_metrics PASSED [ 19%]
+tests/test_integration_phase2_3.py::TestErrorHandling::test_short_audio_metrics PASSED [ 20%]
+tests/test_integration_phase2_3.py::TestErrorHandling::test_clipped_audio_metrics FAILED [ 22%]
+tests/test_integration_phase2_3.py::TestErrorHandling::test_dereverb_empty_audio PASSED [ 24%]
+tests/test_integration_phase2_3.py::TestErrorHandling::test_frequency_empty_audio PASSED [ 25%]
+tests/test_integration_phase2_3.py::TestEdgeCases::test_audio_dtype_preservation PASSED [ 27%]
+tests/test_integration_phase2_3.py::TestEdgeCases::test_max_amplitude_not_exceeded FAILED [ 29%]
+tests/test_integration_phase2_3.py::TestEdgeCases::test_normalization_preserves_shape PASSED [ 30%]
+tests/test_metrics.py::TestQualityMetrics::test_snr_estimate_clean FAILED [ 32%]
+tests/test_metrics.py::TestQualityMetrics::test_snr_estimate_noisy PASSED [ 33%]
+tests/test_metrics.py::TestQualityMetrics::test_loudness_lufs PASSED     [ 35%]
+tests/test_metrics.py::TestQualityMetrics::test_spectral_centroid PASSED [ 37%]
+tests/test_metrics.py::TestQualityMetrics::test_clipping_detection_clean FAILED [ 38%]
+tests/test_metrics.py::TestQualityMetrics::test_clipping_detection_clipped FAILED [ 40%]
+tests/test_metrics.py::TestQualityMetrics::test_artifact_detection FAILED [ 41%]
+tests/test_metrics.py::TestQualityMetrics::test_analyze_quality PASSED   [ 43%]
+tests/test_metrics.py::TestQualityMetrics::test_before_after_comparison PASSED [ 45%]
+tests/test_metrics.py::TestQualityMetrics::test_edge_case_silent_audio PASSED [ 46%]
+tests/test_metrics.py::TestQualityMetrics::test_edge_case_short_audio PASSED [ 48%]
+tests/test_metrics.py::TestQualityMetrics::test_dtype_preservation PASSED [ 50%]
+tests/test_metrics.py::TestQualityMetrics::test_clip_prevention PASSED   [ 51%]
+tests/test_polish_and_enhancements.py::test_fallback_separation_robustness PASSED [ 53%]
+tests/test_polish_and_enhancements.py::test_artifact_detection_comprehensive PASSED [ 54%]
+tests/test_polish_and_enhancements.py::test_quality_assessment_accuracy FAILED [ 56%]
+tests/test_polish_and_enhancements.py::test_mbd_enhancement PASSED       [ 58%]
+tests/test_polish_and_enhancements.py::test_full_pipeline_with_all_features FAILED [ 59%]
+tests/test_restoration.py::TestFrequencyRestorer::test_initialization PASSED [ 61%]
+tests/test_restoration.py::TestFrequencyRestorer::test_intensity_clamping PASSED [ 62%]
+tests/test_restoration.py::TestFrequencyRestorer::test_process_clean_audio FAILED [ 64%]
+tests/test_restoration.py::TestFrequencyRestorer::test_process_returns_float32 PASSED [ 66%]
+tests/test_restoration.py::TestFrequencyRestorer::test_intensity_zero_returns_original PASSED [ 67%]
+tests/test_restoration.py::TestFrequencyRestorer::test_intensity_one_applies_full FAILED [ 69%]
+tests/test_restoration.py::TestFrequencyRestorer::test_silent_audio_handling PASSED [ 70%]
+tests/test_restoration.py::TestFrequencyRestorer::test_empty_audio PASSED [ 72%]
+tests/test_restoration.py::TestFrequencyRestorer::test_no_clipping FAILED [ 74%]
+tests/test_restoration.py::TestFrequencyRestorer::test_get_info PASSED   [ 75%]
+tests/test_restoration.py::TestFrequencyRestorer::test_repr PASSED       [ 77%]
+tests/test_restoration.py::TestFrequencyRestorer::test_convenience_function PASSED [ 79%]
+tests/test_restoration.py::TestDereverberator::test_initialization PASSED [ 80%]
+tests/test_restoration.py::TestDereverberator::test_intensity_clamping PASSED [ 82%]
+tests/test_restoration.py::TestDereverberator::test_process_clean_audio PASSED [ 83%]
+tests/test_restoration.py::TestDereverberator::test_process_reverberant_audio PASSED [ 85%]
+tests/test_restoration.py::TestDereverberator::test_process_returns_float32 PASSED [ 87%]
+tests/test_restoration.py::TestDereverberator::test_intensity_zero_returns_original PASSED [ 88%]
+tests/test_restoration.py::TestDereverberator::test_silent_audio_handling PASSED [ 90%]
+tests/test_restoration.py::TestDereverberator::test_empty_audio PASSED   [ 91%]
+tests/test_restoration.py::TestDereverberator::test_no_clipping PASSED   [ 93%]
+tests/test_restoration.py::TestDereverberator::test_get_info PASSED      [ 95%]
+tests/test_restoration.py::TestDereverberator::test_repr PASSED          [ 96%]
+tests/test_restoration.py::TestDereverberator::test_convenience_function PASSED [ 98%]
+tests/test_restoration.py::TestRestorationIntegration::test_both_restorers_sequential FAILED [100%]
+
+=================================== FAILURES ===================================
+____________________ TestPhase2Integration.test_cache_stems ____________________
+tests/test_integration_phase2_3.py:123: in test_cache_stems
+    cache_key = cache.cache_stems(audio_hash, stems, metadata={"test": True})
+audio_engine/cache.py:173: in cache_stems
+    file_size = cache_path.stat().st_size
+/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py:1222: in stat
+    return self._accessor.stat(self)
+E   FileNotFoundError: [Errno 2] No such file or directory: '/var/folders/_4/hjybwb8563l6sgk9j4l36bkh0000gn/T/test_cache_ag30zg1c/stems/st/stems_test_audio_hash_123.npy'
+__________________ TestPhase2Integration.test_segment_caching __________________
+tests/test_integration_phase2_3.py:151: in test_segment_caching
+    keys = cache.cache_segments(base_key, segments)
+audio_engine/cache.py:519: in cache_segments
+    keys.append(self.cache_segment(base_key, i, segment, metadata))
+audio_engine/cache.py:478: in cache_segment
+    file_size = cache_path.stat().st_size
+/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py:1222: in stat
+    return self._accessor.stat(self)
+E   FileNotFoundError: [Errno 2] No such file or directory: '/var/folders/_4/hjybwb8563l6sgk9j4l36bkh0000gn/T/test_cache_kmu95z0d/stems/se/seg_test_segment_key_0.npy'
+____________ TestPhase2Integration.test_cache_version_invalidation _____________
+tests/test_integration_phase2_3.py:171: in test_cache_version_invalidation
+    cache.cache_segment("test_key", 0, test_audio)
+audio_engine/cache.py:478: in cache_segment
+    file_size = cache_path.stat().st_size
+/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py:1222: in stat
+    return self._accessor.stat(self)
+E   FileNotFoundError: [Errno 2] No such file or directory: '/var/folders/_4/hjybwb8563l6sgk9j4l36bkh0000gn/T/test_cache_ndxq2fnr/stems/se/seg_test_key_0.npy'
+_______________ TestPhase3Integration.test_frequency_restoration _______________
+tests/test_integration_phase2_3.py:213: in test_frequency_restoration
+    assert np.max(np.abs(result)) <= 1.0
+E   AssertionError: assert np.float32(nan) <= 1.0
+E    +  where np.float32(nan) = <function max at 0x1066bd8f0>(array([0.03557561, 0.10666863, 0.19055103, ...,        nan,        nan,\n              nan], dtype=float32))
+E    +    where <function max at 0x1066bd8f0> = np.max
+E    +    and   array([0.03557561, 0.10666863, 0.19055103, ...,        nan,        nan,\n              nan], dtype=float32) = <ufunc 'absolute'>(array([0.03557561, 0.10666863, 0.19055103, ...,        nan,        nan,\n              nan], dtype=float32))
+E    +      where <ufunc 'absolute'> = np.abs
+______________ TestPhase3Integration.test_sequential_restoration _______________
+tests/test_integration_phase2_3.py:245: in test_sequential_restoration
+    assert np.max(np.abs(audio)) <= 1.0
+E   AssertionError: assert np.float32(nan) <= 1.0
+E    +  where np.float32(nan) = <function max at 0x1066bd8f0>(array([0.10249387, 0.16330121, 0.2350179 , ...,        nan,        nan,\n              nan], dtype=float32))
+E    +    where <function max at 0x1066bd8f0> = np.max
+E    +    and   array([0.10249387, 0.16330121, 0.2350179 , ...,        nan,        nan,\n              nan], dtype=float32) = <ufunc 'absolute'>(array([0.10249387, 0.16330121, 0.2350179 , ...,        nan,        nan,\n              nan], dtype=float32))
+E    +      where <ufunc 'absolute'> = np.abs
+------------------------------ Captured log call -------------------------------
+WARNING  audio_engine.restoration.dereverberation:dereverberation.py:193 Late reverb suppression failed: Audio buffer is not finite everywhere
+_______ TestPipelineIntegration.test_pipeline_with_restoration_settings ________
+tests/test_integration_phase2_3.py:292: in test_pipeline_with_restoration_settings
+    assert pipeline.config.frequency_intensity == 0.5
+E   AssertionError: assert 0.3 == 0.5
+E    +  where 0.3 = PipelineConfig(mode=<PipelineMode.PREVIEW: 'preview'>, separation_model='htdemucs', enhancement_intensity=0.3, frequency_restoration=True, frequency_intensity=0.3, dereverberation=True, dereverb_intensity=0.2, enable_mbd_polish=False, mbd_intensity=0.3, mix_mode='enhanced', target_loudness_lufs=-14.0, output_format='wav', output_bit_depth=24, use_cache=True, cache_dir=None, output_dir='.').frequency_intensity
+E    +    where PipelineConfig(mode=<PipelineMode.PREVIEW: 'preview'>, separation_model='htdemucs', enhancement_intensity=0.3, frequency_restoration=True, frequency_intensity=0.3, dereverberation=True, dereverb_intensity=0.2, enable_mbd_polish=False, mbd_intensity=0.3, mix_mode='enhanced', target_loudness_lufs=-14.0, output_format='wav', output_bit_depth=24, use_cache=True, cache_dir=None, output_dir='.') = <audio_engine.pipeline.AudioPipeline object at 0x1245d6cd0>.config
+_____ TestPipelineIntegration.test_pipeline_get_info_includes_restoration ______
+tests/test_integration_phase2_3.py:310: in test_pipeline_get_info_includes_restoration
+    assert 'frequency_restoration' in info['config']
+E   AssertionError: assert 'frequency_restoration' in {'enhancement_intensity': 0.5, 'mix_mode': 'enhanced', 'mode': 'render', 'output_format': 'wav', ...}
+------------------------------ Captured log call -------------------------------
+WARNING  audio_engine.device:device.py:77 ⚠️ MPS test failed: module 'torch.mps' has no attribute 'get_device_name'
+_________________ TestErrorHandling.test_clipped_audio_metrics _________________
+tests/test_integration_phase2_3.py:348: in test_clipped_audio_metrics
+    assert has_clipping is True
+E   assert np.True_ is True
+________________ TestEdgeCases.test_max_amplitude_not_exceeded _________________
+tests/test_integration_phase2_3.py:407: in test_max_amplitude_not_exceeded
+    assert np.max(np.abs(result)) <= 1.0
+E   AssertionError: assert np.float32(nan) <= 1.0
+E    +  where np.float32(nan) = <function max at 0x1066bd8f0>(array([0.99, 0.99, 0.99, ...,  nan,  nan,  nan], dtype=float32))
+E    +    where <function max at 0x1066bd8f0> = np.max
+E    +    and   array([0.99, 0.99, 0.99, ...,  nan,  nan,  nan], dtype=float32) = <ufunc 'absolute'>(array([0.99, 0.99, 0.99, ...,  nan,  nan,  nan], dtype=float32))
+E    +      where <ufunc 'absolute'> = np.abs
+__________________ TestQualityMetrics.test_snr_estimate_clean __________________
+tests/test_metrics.py:73: in test_snr_estimate_clean
+    assert snr > 20.0, f"Expected high SNR for clean audio, got {snr}"
+E   AssertionError: Expected high SNR for clean audio, got 1.0928309557119462
+E   assert 1.0928309557119462 > 20.0
+_______________ TestQualityMetrics.test_clipping_detection_clean _______________
+tests/test_metrics.py:102: in test_clipping_detection_clean
+    assert has_clipping is False, "Expected has_clipping=False for clean audio"
+E   AssertionError: Expected has_clipping=False for clean audio
+E   assert np.False_ is False
+______________ TestQualityMetrics.test_clipping_detection_clipped ______________
+tests/test_metrics.py:108: in test_clipping_detection_clipped
+    assert has_clipping is True, "Expected has_clipping=True for clipped audio"
+E   AssertionError: Expected has_clipping=True for clipped audio
+E   assert np.True_ is True
+__________________ TestQualityMetrics.test_artifact_detection __________________
+tests/test_metrics.py:118: in test_artifact_detection
+    assert key in artifacts, f"Missing key: {key}"
+E   AssertionError: Missing key: click_score
+E   assert 'click_score' in {'aliasing_score': 0.7499999858074758, 'clicking_score': 0.0, 'clipping_residual': 0.0, 'metallic_score': 0.0, ...}
+_______________________ test_quality_assessment_accuracy _______________________
+tests/test_polish_and_enhancements.py:59: in test_quality_assessment_accuracy
+    assert "Good" in assessment or "Excellent" in assessment
+E   AssertionError: assert ('Good' in 'Poor with aliasing near Nyquist, compression pumping, muffled highs, recommend intensity 0.5 for polishing' or 'Excellent' in 'Poor with aliasing near Nyquist, compression pumping, muffled highs, recommend intensity 0.5 for polishing')
+_____________________ test_full_pipeline_with_all_features _____________________
+tests/test_polish_and_enhancements.py:109: in test_full_pipeline_with_all_features
+    assert result.success
+E   assert False
+E    +  where False = PipelineResult(original_buffer=None, separation_result=None, enhancement_result=None, mix_result=None, mastering_result=None, output_file=None, output_file_size=0, total_processing_time=0.1978130340576172, stage_times={'ingest': 0.008072137832641602, 'separation': 0.10526394844055176}, success=False, error_message="[Errno 2] No such file or directory: '/Users/hadijaffery/Development/SnipJarvis/Resonate/cache/stems/st/stems_be1188c2c4d7e6db6cc75417fe79b733.npy'").success
+----------------------------- Captured stderr call -----------------------------
+Traceback (most recent call last):
+  File "/Users/hadijaffery/Development/SnipJarvis/Resonate/audio_engine/pipeline.py", line 315, in process
+    cache.cache_stems(audio_hash, stems, {
+  File "/Users/hadijaffery/Development/SnipJarvis/Resonate/audio_engine/cache.py", line 173, in cache_stems
+    file_size = cache_path.stat().st_size
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py", line 1222, in stat
+    return self._accessor.stat(self)
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/hadijaffery/Development/SnipJarvis/Resonate/cache/stems/st/stems_be1188c2c4d7e6db6cc75417fe79b733.npy'
+------------------------------ Captured log call -------------------------------
+WARNING  audio_engine.separator:separator.py:238 Demucs separation failed: not enough values to unpack (expected 4, got 3), using fallback spectral separation
+WARNING  audio_engine.separator:separator.py:333 Using fallback spectral separation (reduced quality)
+ERROR    audio_engine.pipeline:pipeline.py:418 ❌ Pipeline failed: [Errno 2] No such file or directory: '/Users/hadijaffery/Development/SnipJarvis/Resonate/cache/stems/st/stems_be1188c2c4d7e6db6cc75417fe79b733.npy'
+________________ TestFrequencyRestorer.test_process_clean_audio ________________
+tests/test_restoration.py:80: in test_process_clean_audio
+    assert np.max(np.abs(result)) <= 1.0
+E   AssertionError: assert np.float32(nan) <= 1.0
+E    +  where np.float32(nan) = <function max at 0x1066bd8f0>(array([0.02851126, 0.06849673, 0.11601874, ...,        nan,        nan,\n              nan], dtype=float32))
+E    +    where <function max at 0x1066bd8f0> = np.max
+E    +    and   array([0.02851126, 0.06849673, 0.11601874, ...,        nan,        nan,\n              nan], dtype=float32) = <ufunc 'absolute'>(array([0.02851126, 0.06849673, 0.11601874, ...,        nan,        nan,\n              nan], dtype=float32))
+E    +      where <ufunc 'absolute'> = np.abs
+____________ TestFrequencyRestorer.test_intensity_one_applies_full _____________
+tests/test_restoration.py:106: in test_intensity_one_applies_full
+    assert np.max(np.abs(result)) <= 1.0
+E   AssertionError: assert np.float32(nan) <= 1.0
+E    +  where np.float32(nan) = <function max at 0x1066bd8f0>(array([0.11404505, 0.1800134 , 0.27649707, ...,        nan,        nan,\n              nan], dtype=float32))
+E    +    where <function max at 0x1066bd8f0> = np.max
+E    +    and   array([0.11404505, 0.1800134 , 0.27649707, ...,        nan,        nan,\n              nan], dtype=float32) = <ufunc 'absolute'>(array([0.11404505, 0.1800134 , 0.27649707, ...,        nan,        nan,\n              nan], dtype=float32))
+E    +      where <ufunc 'absolute'> = np.abs
+____________________ TestFrequencyRestorer.test_no_clipping ____________________
+tests/test_restoration.py:132: in test_no_clipping
+    assert np.max(np.abs(result)) <= 1.0
+E   AssertionError: assert np.float32(nan) <= 1.0
+E    +  where np.float32(nan) = <function max at 0x1066bd8f0>(array([0.11404505, 0.1800134 , 0.27649707, ...,        nan,        nan,\n              nan], dtype=float32))
+E    +    where <function max at 0x1066bd8f0> = np.max
+E    +    and   array([0.11404505, 0.1800134 , 0.27649707, ...,        nan,        nan,\n              nan], dtype=float32) = <ufunc 'absolute'>(array([0.11404505, 0.1800134 , 0.27649707, ...,        nan,        nan,\n              nan], dtype=float32))
+E    +      where <ufunc 'absolute'> = np.abs
+__________ TestRestorationIntegration.test_both_restorers_sequential ___________
+tests/test_restoration.py:331: in test_both_restorers_sequential
+    assert np.max(np.abs(audio)) <= 1.0
+E   AssertionError: assert np.float32(nan) <= 1.0
+E    +  where np.float32(nan) = <function max at 0x1066bd8f0>(array([0.09635179, 0.1306244 , 0.17132568, ...,        nan,        nan,\n              nan], dtype=float32))
+E    +    where <function max at 0x1066bd8f0> = np.max
+E    +    and   array([0.09635179, 0.1306244 , 0.17132568, ...,        nan,        nan,\n              nan], dtype=float32) = <ufunc 'absolute'>(array([0.09635179, 0.1306244 , 0.17132568, ...,        nan,        nan,\n              nan], dtype=float32))
+E    +      where <ufunc 'absolute'> = np.abs
+------------------------------ Captured log call -------------------------------
+WARNING  audio_engine.restoration.dereverberation:dereverberation.py:193 Late reverb suppression failed: Audio buffer is not finite everywhere
+=========================== short test summary info ============================
+FAILED tests/test_integration_phase2_3.py::TestPhase2Integration::test_cache_stems
+FAILED tests/test_integration_phase2_3.py::TestPhase2Integration::test_segment_caching
+FAILED tests/test_integration_phase2_3.py::TestPhase2Integration::test_cache_version_invalidation
+FAILED tests/test_integration_phase2_3.py::TestPhase3Integration::test_frequency_restoration
+FAILED tests/test_integration_phase2_3.py::TestPhase3Integration::test_sequential_restoration
+FAILED tests/test_integration_phase2_3.py::TestPipelineIntegration::test_pipeline_with_restoration_settings
+FAILED tests/test_integration_phase2_3.py::TestPipelineIntegration::test_pipeline_get_info_includes_restoration
+FAILED tests/test_integration_phase2_3.py::TestErrorHandling::test_clipped_audio_metrics
+FAILED tests/test_integration_phase2_3.py::TestEdgeCases::test_max_amplitude_not_exceeded
+FAILED tests/test_metrics.py::TestQualityMetrics::test_snr_estimate_clean - A...
+FAILED tests/test_metrics.py::TestQualityMetrics::test_clipping_detection_clean
+FAILED tests/test_metrics.py::TestQualityMetrics::test_clipping_detection_clipped
+FAILED tests/test_metrics.py::TestQualityMetrics::test_artifact_detection - A...
+FAILED tests/test_polish_and_enhancements.py::test_quality_assessment_accuracy
+FAILED tests/test_polish_and_enhancements.py::test_full_pipeline_with_all_features
+FAILED tests/test_restoration.py::TestFrequencyRestorer::test_process_clean_audio
+FAILED tests/test_restoration.py::TestFrequencyRestorer::test_intensity_one_applies_full
+FAILED tests/test_restoration.py::TestFrequencyRestorer::test_no_clipping - A...
+FAILED tests/test_restoration.py::TestRestorationIntegration::test_both_restorers_sequential
+======================== 19 failed, 43 passed in 3.13s =========================

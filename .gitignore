@@ -1,0 +1,78 @@
+# .gitignore for SnipJarvis
+# Covers macOS, Python, virtual envs, logs, caches, editors, and optional audio files
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Virtualenvs
+.env
+.venv/
+venv/
+env/
+**/venv/
+venv.bak/
+
+# Project-specific known virtualenv (Resonate)
+Resonate/venv/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+pip-wheel-metadata/
+*.egg
+*.whl
+
+# Logs and caches
+*.log
+logs/
+cache/
+.cache/
+.pytest_cache/
+.mypy_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Editors/IDEs
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+.vscode-test/
+
+# Jupyter
+.ipynb_checkpoints
+
+# OS files
+Thumbs.db
+Desktop.ini
+
+# Node
+node_modules/
+
+# Git attributes (if you use LFS)
+.gitattributes
+
+# Optional: large audio/media files — uncomment if you plan to keep audio out of Git
+# *.mp3
+# *.wav
+# *.flac
+# *.aiff
+# *.m4a
+
+# Optional: other environment files
+.env.local
+.env.*.local
+
+# End of .gitignore

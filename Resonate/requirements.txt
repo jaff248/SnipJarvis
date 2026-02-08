@@ -1,0 +1,42 @@
+# Core ML Framework
+torch>=2.1.0
+torchaudio>=2.1.0
+
+# Source Separation
+demucs>=4.0.0
+
+# Audio Processing
+librosa>=0.10.1
+soundfile>=0.12.1
+noisereduce>=2.0.0
+pedalboard>=0.7.0
+pyloudnorm==0.2.0
+scipy>=1.11.0
+numpy>=1.24.0
+
+# UI Framework
+streamlit>=1.28.0
+plotly>=5.18.0
+
+# Utilities
+tqdm>=4.66.0
+pyyaml>=6.0.0
+click>=8.1.0
+
+# Type hints and development
+typing-extensions>=4.8.0
+
+# =============================================================================
+# Phase 4: JASCO Stem Regeneration Dependencies
+# =============================================================================
+
+# Required: Neural polishing and stem regeneration
+audiocraft>=1.3.0  # For JASCO/MusicGen generation (required for Phase 4)
+
+# Optional: Advanced musical analysis (Phase 4 - for enhanced conditioning)
+madmom>=0.16.1  # Optional: Advanced chord extraction and beat tracking
+vamp>=1.1.0     # Optional: Audio analysis plugins for DSP features
+
+# Optional: GPU acceleration extras
+# install with: pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cu118
+# torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118

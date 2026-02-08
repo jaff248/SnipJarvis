@@ -1,0 +1,30 @@
+{
+  "input_file": "Shadows John Summit Unreleased.mp3",
+  "output_file": "Shadows John Summit Unreleased_studio_remaster.wav",
+  "reference_file": "Mesto x Fallon - Diet Caramelle Coke (John Summit Mashup).mp3",
+  "input_profile": {
+    "loudness_lufs": -7.567366836050067,
+    "peak_db": -0.1983620459281637,
+    "snr_db": 8.128985437826234,
+    "dynamic_range_db": 6.36494197134002,
+    "clipping_percent": 0.0
+  },
+  "output_profile": {
+    "loudness_lufs": -9.734104985302826,
+    "peak_db": -0.8504594225679108,
+    "snr_db": 5.316544175380887,
+    "dynamic_range_db": 4.048793607006996,
+    "clipping_percent": 0.0
+  },
+  "processing_steps": [
+    "analyze_input",
+    "analyze_reference",
+    "preconditioning",
+    "eq_matching",
+    "multiband_compression",
+    "loudness_normalization",
+    "save"
+  ],
+  "processing_time_s": 23.732475757598877,
+  "quality_improved": true
+}
